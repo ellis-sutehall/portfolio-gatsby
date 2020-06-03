@@ -1,0 +1,30 @@
+@charset 'utf-8';
+
+@import "./variables";
+@import "~bulma/bulma.sass";
+
+@import "./typography";
+@import "./nav";
+@import "./buttons";
+@import "./home";
+@import "./contactform";
+@import "./projects";
+@import "./footer";
+
+body {
+  background-color: $liver;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  transition: transform 0.3s ease-in;
+  flex-grow: 1;
+  .menu-is-open & {
+    transform: translateX(-200px);
+  }
+}

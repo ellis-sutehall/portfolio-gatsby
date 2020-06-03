@@ -1,0 +1,95 @@
+header {
+  .navbar-burger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: $lavender;
+    border: 0;
+    box-shadow: 0;
+    background-color: transparent;
+    z-index: 100;
+    &:active,
+    &:focus {
+      outline: 0;
+    }
+  }
+  .navbar {
+    background-color: transparent;
+    .container {
+      justify-content: space-between;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .logo {
+      padding-left: 1.5rem;
+      width: 100%;
+      @include from($desktop) {
+        width: 30%;
+        padding-left: 0;
+      }
+      a {
+        text-transform: uppercase;
+      }
+    }
+    .main-nav {
+      background-color: $black;
+      height: 100vh;
+      position: fixed;
+      top: $navbar-height;
+      right: 0;
+      width: 200px;
+      transform: translateX(203px);
+      transition: transform 0.3s ease-in;
+      -webkit-box-shadow: -3px -3px 5px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: -3px -3px 5px 0px rgba(0, 0, 0, 0.75);
+      box-shadow: -3px -3px 5px 0px rgba(0, 0, 0, 0.75);
+      @include from($desktop) {
+        box-shadow: none;
+        text-align: right;
+        width: 70%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      a {
+        @include from($desktop) {
+          display: inline;
+        }
+        &:first-of-type {
+          margin-top: $navbar-height / 2;
+          @include from($desktop) {
+            margin-top: 0;
+          }
+        }
+      }
+
+      .menu-is-open & {
+        transform: translateX(0);
+      }
+      @include from($desktop) {
+        position: initial;
+        height: 100%;
+        top: initial;
+        right: initial;
+        width: 100%;
+        background-color: transparent;
+        transform: translateX(0);
+      }
+    }
+    .navbar-item {
+      color: $lavender;
+      text-transform: lowercase;
+      background-color: transparent;
+      transition: color 0.3s ease-in;
+      text-align: center;
+      &[aria-current="page"] {
+        font-weight: bold;
+        color: $violet;
+      }
+      &:hover {
+        color: $violet;
+      }
+    }
+  }
+}

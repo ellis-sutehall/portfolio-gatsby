@@ -1,0 +1,43 @@
+body {
+  font-family: "Asap", sans-serif;
+  color: $lavender;
+}
+
+.navbar-item,
+input,
+textarea {
+  font-family: "Inconsolata", monospace;
+}
+
+.title {
+  &.mono {
+    font-family: "Inconsolata", monospace;
+    color: $lavender;
+  }
+}
+
+.home {
+  .title {
+    &.mono {
+      &.is-1 {
+        font-size: 1.875rem;
+      }
+      &.is-2 {
+        font-size: 1.625rem;
+        margin-bottom: 0.5rem;
+      }
+      &.is-6 {
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+a {
+  color: $violet;
+  font-weight: bold;
+  transition: color 0.3s ease-in;
+  &:hover {
+    color: $lavender;
+  }
+}

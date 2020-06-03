@@ -1,0 +1,41 @@
+// Custom Global Colours
+$lavender: #d8d8f6;
+$violet: #b18fcf;
+$gray: #978897;
+$liver: #494850;
+$black: #2c2c34;
+
+$primary: $violet;
+$secondary: $gray;
+
+// Tags Colours
+$tag-colors: (
+  AWS: #dd6b10,
+  bulma: #00d1b2,
+  foundation: #1779ba,
+  gatsby: #362066,
+  javascript: #f0db4f,
+  netlify: #0e1e25,
+  php: #8892bf,
+  react: #61dafb,
+  rest_api: #000000,
+  wordpress: #0073aa,
+  woocommerce: #96588a,
+  strapi: rgb(0, 126, 255),
+);
+
+// Button overrides
+
+.button {
+  color: $lavender !important;
+  &.is-primary {
+    background-color: $primary;
+  }
+  &.is-secondary {
+    background-color: $secondary;
+    border: 0;
+  }
+}
+
+// Heights
+// $navbar-height

@@ -1,0 +1,66 @@
+.projects {
+  .grid {
+    @include from($tablet) {
+      display: grid;
+      grid-template-columns: repeat(2, 41.25em);
+      grid-gap: $column-gap * 2;
+    }
+
+    .grid-item {
+      @include mobile {
+        margin-bottom: $size-1;
+      }
+      display: flex;
+    }
+  }
+
+  .project-link {
+    display: flex;
+    width: 100%;
+  }
+  .card {
+    background-color: $black;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    &:hover {
+      .card-image {
+        img {
+          transform: scale(1.06);
+        }
+      }
+    }
+    .card-image {
+      img {
+        transition: transform 0.5s ease, opacity 500ms ease 0s !important;
+      }
+    }
+    .card-content {
+      color: $lavender;
+      flex: 1 0 auto;
+    }
+  }
+}
+
+.tags {
+  padding: $size-4;
+  .tag {
+    color: white;
+    font-weight: bold;
+    @each $key, $val in $tag-colors {
+      &.#{$key} {
+        background-color: #{$val};
+      }
+    }
+    &.javascript,
+    &.react {
+      color: $black;
+    }
+  }
+}
+
+.project {
+  .tags {
+    padding: $size-4 0;
+  }
+}
