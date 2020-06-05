@@ -39,7 +39,7 @@ const ContactForm = () => {
       >
         <div className="columns">
           <div className="column is-half">
-            <input type="hidden" name="contact" value="contact" />
+            <input type="hidden" name="form-name" value="contact" />
             <div className="field">
               <p className="control has-icons-left has-icons-right">
                 <input
