@@ -30,12 +30,19 @@ const ContactForm = () => {
 
   return (
     <div className="contact-form">
-      <form name="contact" method="POST" data-netlify="true" id="contact-form">
+      <form
+        name="contact"
+        method="POST"
+        action="/thank-you"
+        data-netlify="true"
+        id="contact-form"
+      >
         <div className="columns">
           <div className="column is-half">
             <div className="field">
               <p className="control has-icons-left has-icons-right">
                 <input
+                  name="name"
                   className="input"
                   type="text"
                   placeholder="Name*"
@@ -54,6 +61,7 @@ const ContactForm = () => {
             <div className="field">
               <p className="control has-icons-left has-icons-right">
                 <input
+                  name="email"
                   className="input"
                   type="email"
                   placeholder="Email*"
@@ -74,6 +82,7 @@ const ContactForm = () => {
             <div className="field">
               <p className="control has-icons-left has-icons-right">
                 <input
+                  name="subject"
                   type="text"
                   id="subject"
                   className="input"
@@ -93,6 +102,7 @@ const ContactForm = () => {
           <div className="column">
             <div className="field">
               <textarea
+                name="message"
                 className="textarea"
                 placeholder="Your Message*"
                 id="message"
