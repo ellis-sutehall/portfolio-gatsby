@@ -34,7 +34,7 @@ const ContactForm = () => {
         name="contact"
         method="POST"
         action="/thank-you"
-        data-netlify="true"
+        netlify
         id="contact-form"
       >
         <div className="columns">
