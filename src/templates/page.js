@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import ReactMarkdown from "react-markdown"
 import ContactForm from "../components/contact-form"
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 
@@ -32,24 +32,32 @@ const Page = ({ data, location }) => {
         <div className="container">
           <h1 className="title is-1 mono">{page.title}</h1>
           {path === "/contact" ? (
-            <div className="content">
-              <ReactMarkdown source={page.body} />
+            <div className="columns contact">
+              <div className="column is-half">
+                <div className="content">
+                  <ReactMarkdown source={page.body} />
+                </div>
+              </div>
+              <div className="column is-half">
+                <ContactForm />
+              </div>
             </div>
           ) : (
             <div className="columns">
-              <div className="column is-3">
+              {/* <div className="column is-3">
                 <Img
                   fluid={page.image_desktop.childImageSharp.fluid}
                   objectFit="cover"
                   alt="Ellis Sutehall"
                 />
-              </div>
+              </div> */}
               <div className="column is-9">
-                <ReactMarkdown source={page.body} />
+                <div className="content">
+                  <ReactMarkdown source={page.body} />
+                </div>
               </div>
             </div>
           )}
-          {path === "/contact" && <ContactForm />}
         </div>
       </section>
     </Layout>

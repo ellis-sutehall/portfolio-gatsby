@@ -22,6 +22,7 @@ $tag-colors: (
   wordpress: #0073aa,
   woocommerce: #96588a,
   strapi: rgb(0, 126, 255),
+  greensock: #4e9815,
 );
 
 // Button overrides
@@ -38,4 +39,8 @@ $tag-colors: (
 }
 
 // Heights
-// $navbar-height
+$navbar-height: 3.25rem;
+$navbar-height-lrg: 3.25rem;
+
+$footer-height: 9.875rem;
+$footer-height-lrg: 7.188rem;

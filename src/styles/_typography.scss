@@ -16,6 +16,12 @@ textarea {
   }
 }
 
+.content {
+  h2 {
+    color: $lavender;
+  }
+}
+
 .home {
   .title {
     &.mono {
@@ -23,7 +29,7 @@ textarea {
         font-size: 1.875rem;
       }
       &.is-2 {
-        font-size: 1.625rem;
+        font-size: 1.375rem;
         margin-bottom: 0.5rem;
       }
       &.is-6 {
@@ -40,4 +46,8 @@ a {
   &:hover {
     color: $lavender;
   }
+}
+
+strong {
+  color: inherit;
 }

@@ -1,7 +1,28 @@
 .home {
-  .profile-img {
-    img {
-      border-radius: 50%;
+  min-height: calc(100vh - (#{$navbar-height} + #{$footer-height}));
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @include from($desktop) {
+    min-height: calc(100vh - (#{$navbar-height-lrg} + #{$footer-height-lrg}));
+  }
+  .photo {
+    width: 150px;
+    margin: $size-4 auto 0 auto;
+    @include from($desktop) {
+      width: 300px;
+    }
+    .profile-img {
+      img {
+        border-radius: 50%;
+      }
     }
   }
+}
+
+.photo-new {
+  height: 50px;
+  width: 50px;
+  background: red;
 }

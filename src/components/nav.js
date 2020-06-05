@@ -17,6 +17,7 @@ const Nav = () => {
 
   const handleOnClick = () => {
     document.body.classList.toggle("menu-is-open")
+    document.querySelector(".navbar-burger").classList.toggle("is-active")
   }
 
   const closeMenu = () => {

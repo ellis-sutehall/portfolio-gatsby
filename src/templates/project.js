@@ -76,7 +76,9 @@ const Project = ({ data }) => {
               <div className="content">
                 {/* <ReactMarkdown source={project.summary} /> */}
               </div>
-              <Img fluid={project.image.childImageSharp.fluid} />
+              <div className="hero">
+                <Img fluid={project.image.childImageSharp.fluid} />
+              </div>
             </div>
           </div>
         </div>

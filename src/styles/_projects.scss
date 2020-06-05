@@ -2,13 +2,13 @@
   .grid {
     @include from($tablet) {
       display: grid;
-      grid-template-columns: repeat(2, 41.25em);
+      grid-template-columns: repeat(2, 1fr);
       grid-gap: $column-gap * 2;
     }
 
     .grid-item {
       @include mobile {
-        margin-bottom: $size-1;
+        margin-bottom: $size-4;
       }
       display: flex;
     }
@@ -59,7 +59,23 @@
   }
 }
 
-.project {
+.section.project {
+  .hero {
+    margin-bottom: $size-6;
+    @include from($desktop) {
+      margin-bottom: $size-1;
+    }
+  }
+  .buttons {
+    margin-bottom: $size-4;
+    .button {
+      @include mobile {
+        width: 100%;
+        padding-right: 0;
+        margin-right: 0;
+      }
+    }
+  }
   .tags {
     padding: $size-4 0;
   }

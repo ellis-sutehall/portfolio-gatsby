@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import ReactMarkdown from "react-markdown"
+// import { motion } from "framer-motion"
 
 export const data = graphql`
   query {
@@ -13,14 +14,19 @@ export const data = graphql`
       occupation
       photo {
         childImageSharp {
-          fixed(width: 300, height: 300) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
     }
   }
 `
+
+// const variants = {
+//   hidden: { opacity: 0 },
+//   visible: { opacity: 1 },
+// }
 
 const IndexPage = ({ data }) => {
   const home = data.strapiHomePage
@@ -30,13 +36,15 @@ const IndexPage = ({ data }) => {
         <div className="columns">
           <div className="column">
             <h1 className="title is-2 mono">{home.name}</h1>
+            <h2 className="title is-2 mono">&#60; {home.occupation} /&#62;</h2>
             <h6 className="title is-6 mono">{home.location}</h6>
-            <h2 className="title is-1 mono">&#60; {home.occupation} /&#62;</h2>
-            <Img
-              className="profile-img"
-              fixed={home.photo.childImageSharp.fixed}
-              alt={home.name}
-            />
+            <div className="photo">
+              <Img
+                className="profile-img"
+                fluid={home.photo.childImageSharp.fluid}
+                alt={home.name}
+              />
+            </div>
           </div>
         </div>
         <div className="columns">

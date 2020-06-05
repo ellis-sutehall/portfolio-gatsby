@@ -1,20 +1,22 @@
-.contact-form {
+.columns.contact {
+  margin-top: $size-4;
   @include from($desktop) {
-    margin-top: $size-1 * 2;
-    padding: $size-1 0;
+    margin-top: $size-1;
   }
-  form {
-    input,
-    textarea {
-      background-color: $black;
-      color: $lavender;
-      border-color: $lavender;
-      &::placeholder {
+  .contact-form {
+    form {
+      input,
+      textarea {
+        background-color: $black;
         color: $lavender;
-      }
-      &:active,
-      &:hover {
-        border-color: $violet;
+        border-color: $lavender;
+        &::placeholder {
+          color: $lavender;
+        }
+        &:active,
+        &:hover {
+          border-color: $violet;
+        }
       }
     }
   }

@@ -34,13 +34,6 @@ function SEO({ description, lang, meta, title }) {
       }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
-      link={[
-        {
-          rel: "stylesheet",
-          href:
-            "https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,500;0,600;1,400&family=Inconsolata:wght@400;600&display=swap",
-        },
-      ]}
       meta={[
         {
           name: `description`,
@@ -56,11 +49,11 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:type`,
-          content: `website`,
+          content: metaDescription,
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: metaDescription,
         },
         {
           name: `twitter:creator`,

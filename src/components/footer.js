@@ -1,14 +1,20 @@
 import React from "react"
+import Moment from "react-moment"
+
+const date = new Date()
 
 const Footer = () => (
   <section className="section footer">
     <div className="container">
       <footer>
         <div className="columns">
-          <div className="column has-text-centered has-text-left-desktop">
-            <p>Ellis Sutehall 2020</p>
+          <div className="column has-text-centered has-text-left-tablet">
+            <p>
+              Ellis Sutehall &copy; <Moment format="YYYY">{date}</Moment>. Fast.
+              Secure. Modern
+            </p>
           </div>
-          <div className="column has-text-right-desktop has-text-centered">
+          <div className="column has-text-right-tablet has-text-centered">
             <p>
               Built with{" "}
               <a href="https://strapi.io/" rel="noreferrer" target="_blank">

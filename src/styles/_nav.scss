@@ -12,6 +12,9 @@ header {
     &:focus {
       outline: 0;
     }
+    &:hover {
+      background-color: transparent;
+    }
   }
   .navbar {
     background-color: transparent;
@@ -41,9 +44,9 @@ header {
       width: 200px;
       transform: translateX(203px);
       transition: transform 0.3s ease-in;
-      -webkit-box-shadow: -3px -3px 5px 0px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: -3px -3px 5px 0px rgba(0, 0, 0, 0.75);
-      box-shadow: -3px -3px 5px 0px rgba(0, 0, 0, 0.75);
+      // -webkit-box-shadow: -3px -3px 5px 0px rgba(0, 0, 0, 0.75);
+      // -moz-box-shadow: -3px -3px 5px 0px rgba(0, 0, 0, 0.75);
+      // box-shadow: -3px -3px 5px 0px rgba(0, 0, 0, 0.75);
       @include from($desktop) {
         box-shadow: none;
         text-align: right;
