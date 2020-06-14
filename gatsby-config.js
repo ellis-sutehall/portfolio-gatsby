@@ -7,10 +7,17 @@ module.exports = {
     title: "Ellis Sutehall's Portfolio",
     description: "Portfolio site for Ellis Sutehall",
     author: "Ellis Sutehall",
+    siteUrl: "https://ellissutehall.co.uk",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: [`/thank-you`],
+      },
+    },
     {
       resolve: `gatsby-plugin-gtag`,
       options: {
