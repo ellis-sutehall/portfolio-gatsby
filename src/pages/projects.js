@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import ReactMarkdown from "react-markdown"
 import ProjectsComponent from "../components/projects"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 const ProjectsLanding = () => {
   const data = useStaticQuery(graphql`
@@ -46,7 +47,11 @@ const ProjectsLanding = () => {
   `)
   const projectslanding = data.strapiWorkLanding
   return (
-    <Layout title="Projects">
+    <Layout>
+      <SEO
+        title="Projects"
+        description="Here you can explore all my Projects so far. Each page contains information about the project and a link to the live site."
+      />
       <section className="section">
         <div className="container">
           <div>

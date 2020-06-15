@@ -1,13 +1,13 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 import ReactMarkdown from "react-markdown"
 import Img from "gatsby-image"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
-
-import Layout from "../components/layout"
 
 export const query = graphql`
   query ProjectsQuery($slug: String!) {
@@ -17,6 +17,7 @@ export const query = graphql`
       body
       project_link
       github_link
+      meta_description
       stacks {
         id
         technology
@@ -107,7 +108,8 @@ const Project = ({ data }) => {
   }
 
   return (
-    <Layout title={project.title}>
+    <Layout>
+      <SEO title={project.title} description={project.meta_description} />
       <section className="section project">
         <div className="container">
           {projectImage()}

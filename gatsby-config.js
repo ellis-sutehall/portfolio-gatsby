@@ -13,9 +13,23 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
     {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://ellissutehall.co.uk/`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-sitemap`,
       options: {
         exclude: [`/thank-you`],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://ellissutehall.co.uk/",
+        sitemap: "https://ellissutehall.co.uk//sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
       },
     },
     {

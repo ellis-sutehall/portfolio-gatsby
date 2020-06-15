@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import SEO from "../components/seo"
 import ReactMarkdown from "react-markdown"
 import ContactForm from "../components/contact-form"
 // import Img from "gatsby-image"
@@ -12,6 +13,7 @@ export const query = graphql`
       title
       body
       slug
+      meta_description
       image_desktop {
         childImageSharp {
           fluid(maxWidth: 336) {
@@ -27,7 +29,8 @@ const Page = ({ data, location }) => {
   const page = data.strapiBasicPages
   const path = location.pathname
   return (
-    <Layout title={page.title}>
+    <Layout>
+      <SEO title={page.title} description={page.meta_description} />
       <section className="section">
         <div className="container">
           <h1 className="title is-1 mono">{page.title}</h1>
