@@ -28,7 +28,7 @@ module.exports = {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: "https://ellissutehall.co.uk/",
-        sitemap: "https://ellissutehall.co.uk//sitemap.xml",
+        sitemap: "https://ellissutehall.co.uk/sitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },

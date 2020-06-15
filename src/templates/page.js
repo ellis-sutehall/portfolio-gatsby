@@ -13,7 +13,6 @@ export const query = graphql`
       title
       body
       slug
-      meta_description
       image_desktop {
         childImageSharp {
           fluid(maxWidth: 336) {
@@ -28,9 +27,17 @@ export const query = graphql`
 const Page = ({ data, location }) => {
   const page = data.strapiBasicPages
   const path = location.pathname
+  let description
+  if (path === "/contact") {
+    description =
+      "Please feel free to get in toucht to discuss a potential project, a site update or any other query you might have."
+  } else {
+    description =
+      "I am web developer with a focus on front-end living and working in Cambridge, UK. I have over 8 years experience in web development with 2 of those years working in an agency."
+  }
   return (
     <Layout>
-      <SEO title={page.title} description={page.meta_description} />
+      <SEO title={page.title} description={description} />
       <section className="section">
         <div className="container">
           <h1 className="title is-1 mono">{page.title}</h1>
